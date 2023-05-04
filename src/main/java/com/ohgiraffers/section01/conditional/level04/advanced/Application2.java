@@ -1,5 +1,8 @@
 package com.ohgiraffers.section01.conditional.level04.advanced;
 
+import java.util.Scanner;
+
+
 public class Application2 {
 
 	public static void main(String[] args) {
@@ -36,7 +39,43 @@ public class Application2 {
 		 * ======================
 		 * 총 급여 : 3200000
 		 * */
-		
+
+		Scanner sc = new Scanner(System.in);
+		int salary; //월 급여
+		int revenue; //매출액
+		int bonusPoint = 0; //보너스율
+		int bonusSalary; //보너스금액
+		int finalSalary; //최종 급여
+
+		System.out.print("월 급여 입력: ");
+		salary = sc.nextInt();
+		System.out.print("매출액 입력: ");
+		revenue = sc.nextInt();
+
+		if (revenue < 10000000){
+			bonusPoint = 0;
+		} else if (revenue >= 10000000 && revenue < 30000000 ) {
+			bonusPoint = 1;
+		} else if (revenue >= 30000000 && revenue < 50000000) {
+			bonusPoint = 3;
+		} else if (revenue >= 50000000) {
+			bonusPoint = 5;
+		} else{
+			System.out.println("매출액 입력을 다시 확인해주세요.(입력값: "+revenue);
+		}
+
+		bonusSalary = (int)((double)(bonusPoint * 0.01) * revenue);
+		finalSalary = salary + bonusSalary;
+
+
+		System.out.println("========================");
+		System.out.println("매출액 : "+revenue);
+		System.out.println("보너스율 : " + bonusPoint + "%");
+		System.out.println("월 급여: "+ salary);
+		System.out.println("보너스 금액: "+bonusSalary);
+		System.out.println("========================");
+		System.out.println("총 급여 : "+finalSalary);
 	}
+
 
 }
