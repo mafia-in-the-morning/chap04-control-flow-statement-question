@@ -23,6 +23,7 @@ public class Application1 {
 			System.out.println("양수다.");
 		} else {
 			System.out.println("양수가아니다.");
+
 		}
 
 
