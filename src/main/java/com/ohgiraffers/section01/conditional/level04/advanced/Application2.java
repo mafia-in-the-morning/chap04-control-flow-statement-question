@@ -39,12 +39,28 @@ public class Application2 {
 		 * 총 급여 : 3200000
 		 * */
 		Scanner sc = new Scanner(System.in);
-		int sum = 0;
+		double sum = 0.0;
 		System.out.println("월 급여를 입력해주세요: ");
 		int wage = sc.nextInt();
 		System.out.println("월 매출액을 입력해주세요: ");
 		int sale = sc.nextInt();
 
+		double bonus = 0.0;
+		double bonusm=0.0;
+		if(sale>=50000000){
+			bonus=0.05;
+		}else if(sale>=30000000){
+			bonus=0.03;
+		}else if(sale>=10000000){
+			bonus=0.01;
+		}else if(sale<10000000){
+			bonus=0;
+		}
+		bonusm=sale*bonus;
+		System.out.println(bonus);
+		System.out.println(bonusm);
+		sum=wage+(sale*bonus);
+		System.out.println(sum);
 	}
 
 }

@@ -1,9 +1,12 @@
 package com.ohgiraffers.section02.looping_and_branching.level03.hard;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Application2 {
 
 	public static void main(String[] args) {
-		
+
 		/* 1부터 100 사이의 난수를 발생시키고
 		 * 정수를 입력 받아서 입력받은 정수가 발생한 난수보다 큰 경우 "입력하신 정수보다 큽니다." 출력,
 		 * 입력받은 정수보다 난수가 작은 경우 "입력하신 정수보다 작습니다." 를 출력하며
@@ -23,7 +26,28 @@ public class Application2 {
 		 * 정수를 입력하세요 : 4
 		 * 정답입니다. 3회만에 정답을 맞추셨습니다.
 		 * */
-		
+		Random r = new Random();
+		int random = r.nextInt(100);
+
+		int off =0;
+		int cnt = 0;
+		while(off==0){
+			Scanner sc = new Scanner(System.in);
+			System.out.println("정수를 입력하세요 : ");
+			int choice=sc.nextInt();
+			if(random <choice){
+				System.out.println("입력하신 정수보다 작습니다.");
+				cnt++;
+			}else if(random>choice){
+				System.out.println("입력하신 정수보다 큽니다.");
+				cnt++;
+			}else if(random==choice){
+				off=1;
+			}
+
+		}
+		System.out.println("정답입니다."+cnt+"회 만에 정답을 맞춘 것입니다.");
+
 	}
 
 }

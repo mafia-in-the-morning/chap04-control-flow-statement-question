@@ -1,9 +1,11 @@
 package com.ohgiraffers.section02.looping_and_branching.level04.advanced;
 
+import java.util.Scanner;
+
 public class Application1 {
-	
+
 	public static void main(String[] args) {
-		
+
 		/* 어떤 문장의 각 알파벳을 일정한 거리만큼 밀어서
 		 * 다른 알파벳으로 바꾸는 암호화 방식을 시저 암호라고 합니다.
 		 * 
@@ -13,7 +15,9 @@ public class Application1 {
 		 * 문자열 1개를 입력 받고, 얼마나 문자를 밀지 알려주는 0보다 큰 정수를 1개 입력 받아
 		 * 암호문을 작성하는 프로그램을 만들어보세요
 		 * 단, 숫자가 27인 경우는 1칸을 밀게 됩니다. (알파벳은 26글자 이기 때문)
-		 * 
+		 *
+		 *  * A=65 Z=90
+		 * a=97 z=122
 		 * -- 입력 예시 --
 		 * 문자열을 입력하세요 : a B z
 		 * 숫자를 입력하세요 : 4
@@ -28,7 +32,26 @@ public class Application1 {
 		 * -- 출력 예시 --
 		 * b C a
 		 * */
-		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("문자열을 입력하세요 :");
+		String a = sc.next();
+		System.out.println("숫자를 입력하세요 :");
+		int b = sc.nextInt();
+
+		for(int i = 0; i<a.length();i++){
+			char c = a.charAt(i);
+			if((((int)c+b)>90)&&((int)c>=65&&(int)c<=90)){
+				c=(char)((65+((((int)c+b)-90))%26)-1);
+				System.out.println(c);
+			} else if ((((int)c+b)>122)&&((int)c>=97&&(int)c<=122)) {
+				c=(char)((97+((((int)c+b)-122))%26)-1);
+				System.out.println(c);
+			} else {
+
+				System.out.println(((char) ((int) c + (b % 26))));
+			}
+		}
+
 	}
-	
+
 }

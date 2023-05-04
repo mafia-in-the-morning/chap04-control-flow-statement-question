@@ -1,9 +1,11 @@
 package com.ohgiraffers.section02.looping_and_branching.level03.hard;
 
+import java.util.Scanner;
+
 public class Application1 {
 
 	public static void main(String[] args) {
-		
+
 		/* 2보다 큰 정수를 하나 입력 받아 그 수가 소수인지 아닌지를 판별해서 출력하세요
 		 * 소수인 경우 "소수다." 출력, 소수가 아닌 경우 "소수가 아니다." 출력
 		 * 
@@ -20,7 +22,24 @@ public class Application1 {
 		 * -- 출력 예시 --
 		 * 소수다.
 		 * */
-		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("2보다 큰 정수를 하나 입력하세요 : ");
+		int a = sc.nextInt();
+		int count =0;
+		for(int i = 2;i<a;i++){
+			if(a%i!=0){
+
+			}else{
+
+				count++;
+			}
+		}
+		if(count>=1){
+			System.out.println("소수가 아니다.");
+		}else if(count==0){
+			System.out.println("소수이다.");
+		}
+
 	}
 
 }
