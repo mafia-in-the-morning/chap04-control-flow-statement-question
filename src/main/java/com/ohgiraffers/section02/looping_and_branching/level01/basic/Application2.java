@@ -1,5 +1,7 @@
 package com.ohgiraffers.section02.looping_and_branching.level01.basic;
 
+import java.util.Scanner;
+
 public class Application2 {
 
 	public static void main(String[] args) {
@@ -13,6 +15,20 @@ public class Application2 {
 		 * 1부터 5까지의 합 : 15
 		 * 
 		 * */
+
+		Scanner sc = new Scanner(System.in);
+
+		int num1;
+		int sum = 0;
+		System.out.print("정수를 입력하세요: ");
+		num1 = sc.nextInt();
+
+		for (int i = 0; i <= num1; i++) {
+			sum += i;
+		}
+
+		System.out.println("1부터 " + num1 + "까지의 합: " + sum);
+
 		
 	}
 
