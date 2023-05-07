@@ -9,6 +9,15 @@ public class Application2 {
 		 * -- 출력 예시 --
 		 * abcdefghijklmnopqrstuvwxyz
 		 * */
+
+		int num1 = 97;
+		char char1 = (char)num1;
+		//System.out.println(char1);
+
+		for (int i = 0; i < 26; i++) {
+			System.out.print(char1);
+			char1++;
+		}
 		
 	}
 
