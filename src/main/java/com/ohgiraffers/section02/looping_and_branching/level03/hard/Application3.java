@@ -1,7 +1,8 @@
 package com.ohgiraffers.section02.looping_and_branching.level03.hard;
 
-public class Application3 {
+import java.util.*;
 
+public class Application3 {
 	public static void main(String[] args) {
 		
 		/* 문자열을 하나 입력 받고, 검색할 문자를 입력 하여
@@ -30,7 +31,42 @@ public class Application3 {
 		 * -- 출력 예시 --
 		 * 영문자가 아닌 문자가 포함되어 있습니다.
 		 * */
-		
+
+		Scanner sc = new Scanner(System.in);
+		int answer = 0;
+		int chNum;
+
+		//String charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		System.out.print("문자열 입력: ");
+		String str = sc.nextLine();
+		System.out.print("문자 입력: ");
+		char ch = sc.nextLine().charAt(0);
+
+		//chNum = (int)ch;
+		//System.out.println(chNum);
+		//영어소문자 a : 97-122
+		//영어대문자 A-Z : 65-90
+
+		for (char c: str.toCharArray()) {
+
+			chNum = (int)c;
+			if(chNum<65){
+				System.out.println("영문자가 아닌 문자가 포함되어 있습니다.");
+				return;
+			} else if (chNum > 90 && chNum < 97) {
+				System.out.println("영문자가 아닌 문자가 포함되어 있습니다.");
+				return;
+			} else if (chNum > 122) {
+				System.out.println("영문자가 아닌 문자가 포함되어 있습니다.");
+				return;
+			} else{
+				if(c == ch){
+					answer++;
+				}
+			}
+		}
+		System.out.println("포함된 횟수: "+answer);
+
 	}
 
 }
