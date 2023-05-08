@@ -1,5 +1,7 @@
 package com.ohgiraffers.section02.looping_and_branching.level04.advanced;
 
+import java.util.Scanner;
+
 public class Application1 {
 	
 	public static void main(String[] args) {
@@ -28,7 +30,35 @@ public class Application1 {
 		 * -- 출력 예시 --
 		 * b C a
 		 * */
-		
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열을 입력하세요: ");
+		String str = sc.nextLine();
+
+		System.out.print("숫자를 입력하세요: ");
+		int num = sc.nextInt();
+
+		String temp = "";
+		int charNum;
+
+		for (char c: str.toCharArray()) {
+			if(c == ' '){
+				//System.out.println(" +공백문자+ ");
+				temp += c;
+				continue;
+			} else {
+				//System.out.println(" +영문자+ ");
+				charNum = (int)c;
+				//System.out.println("시저코드 적용 전: " +c);
+				charNum += (num % 26);
+				c = (char)charNum;
+				//System.out.println("시저코드 적용 후: " +c);
+				temp += c;
+			}
+		}
+			System.out.println("시저코드 적용된 문자열: " + temp);
+
+
 	}
 	
 }
