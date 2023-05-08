@@ -1,5 +1,8 @@
 package com.ohgiraffers.section02.looping_and_branching.level03.hard;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Application2 {
 
 	public static void main(String[] args) {
@@ -23,7 +26,31 @@ public class Application2 {
 		 * 정수를 입력하세요 : 4
 		 * 정답입니다. 3회만에 정답을 맞추셨습니다.
 		 * */
-		
+
+		int stackNum = 0;
+		Random random = new Random();
+		int randomNum = random.nextInt(100) + 1;
+		//System.out.println("랜덤 숫자: "+ randomNum);
+
+		Scanner sc = new Scanner(System.in);
+		while (true){
+			System.out.print("정수를 입력하세요 : ");
+			int num1 = sc.nextInt();
+
+			if(num1 == randomNum){
+				stackNum++;
+				System.out.println("정답입니다. "+stackNum+"회 만에 정답을 맞췄습니다.");
+				break;
+			} else if (num1 > randomNum){
+				stackNum ++;
+				System.out.println("입력하신 정수보다 작습니다.");
+			} else {
+				stackNum ++;
+				System.out.println("입력하신 정수보다 큽니다.");
+			}
+
+		}
+
 	}
 
 }
