@@ -1,5 +1,7 @@
 package com.ohgiraffers.section02.looping_and_branching.level04.advanced;
 
+import java.util.Scanner;
+
 public class Application1 {
 	
 	public static void main(String[] args) {
@@ -28,7 +30,38 @@ public class Application1 {
 		 * -- 출력 예시 --
 		 * b C a
 		 * */
-		
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("문자열을 입력하세요: ");
+		String inputString = scanner.nextLine();
+
+		System.out.print("숫자를 입력하세요: ");
+		int shift = scanner.nextInt();
+
+		String encryptedString = encryptString(inputString, shift);
+		System.out.println(encryptedString);
+
+		scanner.close();
+	}
+
+	public static String encryptString(String inputString, int shift) {
+		StringBuilder result = new StringBuilder();
+
+		for (int i = 0; i < inputString.length(); i++) {
+			char c = inputString.charAt(i);
+
+			if (Character.isLetter(c)) {
+				char base = Character.isUpperCase(c) ? 'A' : 'a';
+				int index = (c - base + shift) % 26;
+				char shiftedChar = (char) (base + index);
+				result.append(shiftedChar);
+			} else {
+				result.append(c);
+			}
+		}
+
+		return result.toString();
 	}
 	
 }
