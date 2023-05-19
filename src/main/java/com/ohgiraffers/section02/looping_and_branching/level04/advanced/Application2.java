@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application2 {
 
+
 	public static void main(String[] args) {
 		
 		/* 받은 금액을 입력 받고, 상품 가격을 입력 받아 거스름돈을 계산하는 프로그램을 작성하세요

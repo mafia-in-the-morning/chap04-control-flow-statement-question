@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application2 {
 
+
 	public static void main(String[] args) {
 		
 		/* 정수 한 개를 입력 받고, 1부터 입력 받은 정수까지의 합을 계산해서 출력하세요

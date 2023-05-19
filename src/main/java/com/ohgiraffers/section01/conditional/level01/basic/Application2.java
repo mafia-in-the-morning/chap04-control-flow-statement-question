@@ -2,6 +2,7 @@ package com.ohgiraffers.section01.conditional.level01.basic;
 
 import java.util.Scanner;
 
+
 public class Application2 {
 
 	public static void main(String[] args) {

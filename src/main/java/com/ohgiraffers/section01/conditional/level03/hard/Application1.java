@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application1 {
 
+
 	public static  void main(String[] args) {
 
 		/* 두 개의 정수를 입력 받아 변수에 저장하고,

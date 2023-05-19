@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application2 {
 
+
 	public static void main(String[] args) {
 		
 		/* 과일 이름("사과", "바나나", "복숭아", "키위") 중 한 가지를 문자열로 입려하면 

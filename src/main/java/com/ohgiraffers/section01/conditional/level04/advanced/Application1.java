@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application1 {
 
+
 	public static void main(String[] args) {
 
 		/* 국어, 영어, 수학 점수를 입력받아

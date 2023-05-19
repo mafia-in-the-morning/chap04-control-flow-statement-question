@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application2 {
 
+
 	public static void main(String[] args) {
 
 		/* BMI(신체질량지수)를 계산하고, 계산된 값에 따라

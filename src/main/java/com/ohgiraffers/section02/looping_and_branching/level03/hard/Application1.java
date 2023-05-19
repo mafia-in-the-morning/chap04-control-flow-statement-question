@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application1 {
 
+
 	public static void main(String[] args) {
 		
 		/* 2보다 큰 정수를 하나 입력 받아 그 수가 소수인지 아닌지를 판별해서 출력하세요

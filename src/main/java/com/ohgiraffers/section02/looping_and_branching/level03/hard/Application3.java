@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application3 {
 
+
 	public static void main(String[] args) {
 		
 		/* 문자열을 하나 입력 받고, 검색할 문자를 입력 하여

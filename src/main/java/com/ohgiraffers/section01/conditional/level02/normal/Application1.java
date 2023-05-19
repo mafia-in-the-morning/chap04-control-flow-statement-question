@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application1 {
 
+
 	public static void main(String[] args) {
 
 		/* 1~10 사이의 정수 한개를 입력받아 홀수인지 짝수인지 인지 확인하고,

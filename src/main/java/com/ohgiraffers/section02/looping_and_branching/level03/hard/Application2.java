@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Application2 {
 
+
 	public static void main(String[] args) {
 		
 		/* 1부터 100 사이의 난수를 발생시키고
